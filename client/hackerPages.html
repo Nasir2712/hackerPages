@@ -1,14 +1,55 @@
-<head>
-  <title>hackerPages</title>
-</head>
+<template name ='hello'>
+<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="hacker-profile">
+				<p class="text-center">Create Your Hacker Profile below!</p>
+			</div>
+		</div>
+	</div>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
+	<div class="container">
+	<div class="row">
+	<div class="flex-container">
+	<form class="form-horizontal" role="form">
 
-  {{> hello}}
-</body>
+<div class="col-sm-12">
+  <div class="form-group">
+    <label class="control-label" >Legal Name</label>
+     
+      <input class="form-control" id="exclamation" placeholder="Huzzah, Egads, Shazbot ...">
+    </div>
+  </div>
+  <div class="col-sm-12"> 
+   <div class="form-group">
+    <label class="control-label" >Pseudonym</label>
+    
+      <input type="text" class="form-control" id="adverb" placeholder="Lazily, sloppily, quickly ...">
+    </div>
+  </div>
+  <div class="col-sm-12"> 
+   <div class="form-group">
+    <label class="control-label" >Email</label>
+    
+      <input type="text" class="form-control" id="noun" placeholder="dog, horse, meerkat ...">
+    </div>
+  </div>
+  <div class="col-sm-12"> 
+   <div class="form-group">
+    <label class="control-label" >Best Hack</label>
+      <input type="text" class="form-control" id="verb" placeholder="ran, danced, twerked....">
+    </div>
+  </div>
 
-<template name="hackerProfile">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  <div class="form-group"> 
+    <div class="col-sm-10">
+      <button id="generateButton" type="button" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
 </template>
