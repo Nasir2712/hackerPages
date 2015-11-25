@@ -1,23 +1,21 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+Template.hackerProfile.events({
+    'click #generateButton': function (event,template) {
+      event.preventDefault();
+      let legalname = $('#legalname').val();
+      let pseudonym = $('#pseudonym').val();
+      let email = $('#email').val();
+      let besthack = $('#besthack').val();
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+      let hackerProfile = {
+        legalname:legalname,
+        pseudonym:pseudonym,
+        email:email,
+        besthack:besthack
+      }
+
+      Hackers.insert(hackerProfile);
+      alert("Added: " +hackerProfile.legalname);
     }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
-}
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
